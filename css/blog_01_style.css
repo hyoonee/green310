@@ -1,0 +1,86 @@
+@charset 'utf-8';
+* {margin: 0;
+    padding: 0;
+    font-family: '맑은고딕' sans-serif;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+.menu ul li a:hover {background-color: #75dbe7;}
+
+
+aside h2 {color: #666;
+        border-bottom: dotted 2px #ddd;}
+aside ul {margin-bottom: 30px;
+        margin-top: 15px;}
+.menu {margin-bottom: 30px;
+        margin-top: 10px;}
+.menu ul li a{display: block;
+                padding: 15px;
+                font-size: 14px;}
+.menu ul {display: flex;
+        margin-bottom: 30px;} 
+.menu>ul:after {content: "";
+                display: block;
+                clear: both;}
+.box1 h1 {padding: 5px;}
+.box2 {background-color: #7cbac1;}          
+.box3 {display: flex;}
+.box6 {width: 70%;
+        margin-right: 40px;}
+.box6 p {margin-top: 15px;
+        margin-bottom: 20px;}
+.box6 h1 {font-size: 30px;
+        font-weight: bold;}
+.box7 {width: 30%;}
+.box6 img {max-width: 100%;
+            margin-top: 20px;}
+.box6 h2 {border-left: solid 10px #7cbac1;}
+.box3 h2 {font-size: 18px;}
+.box1, .menu, .box3, .box5 {width: 1000px;
+        margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
