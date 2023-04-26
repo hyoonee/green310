@@ -1,10 +1,11 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 * {margin: 0;
     padding: 0;
     font-family: '맑은고딕' sans-serif;}
 ul, ol {list-style: none;}
 a {text-decoration: none;
-    color: #000;}
+color: #000;}
 .menu ul li a:hover {background-color: #75dbe7;}
 
 
@@ -22,7 +23,11 @@ aside ul {margin-bottom: 30px;
 .menu>ul:after {content: "";
                 display: block;
                 clear: both;}
-.box1 h1 {padding: 5px;}
+.box1 h1 {padding: 5px;
+        }
+.box1 a {font-family: 'Paytone One', sans-serif;
+        color: #83a4a8;
+        font-weight: normal;}
 .box2 {background-color: #7cbac1;}          
 .box3 {display: flex;}
 .box6 {width: 70%;
@@ -32,8 +37,22 @@ aside ul {margin-bottom: 30px;
 .box6 h1 {font-size: 30px;
         font-weight: bold;}
 .box7 {width: 30%;}
+.box7 a {position: relative;}
+.box7 li {margin-bottom: 10px;}
+.box7 .txt {background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        }
+.box7 img {width: 100%;
+        }
 .box6 img {max-width: 100%;
-            margin-top: 20px;}
+        margin-top: 20px;}
 .box6 h2 {border-left: solid 10px #7cbac1;}
 .box3 h2 {font-size: 18px;}
 .box1, .menu, .box3, .box5 {width: 1000px;
