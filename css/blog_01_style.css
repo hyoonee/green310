@@ -29,7 +29,20 @@ aside ul {margin-bottom: 30px;
         color: #83a4a8;
         font-weight: normal;}
 
-.box2 {background-color: #7cbac1;}          
+.box2 {background-color: #7cbac1;}     
+
+
+.box4 {background-color: #f0f0d4;
+        padding: 20px;
+        margin-top: 40px;}
+.box4 ul li a {display: block;
+        padding: 5px;
+        font-size: 14px;}
+.box4 ul {display: flex;
+        flex-wrap: wrap;}
+.box4 li {width: 25%;}
+.box4 img {max-width: 100%;}
+
 .box3 {display: flex;}
 .box6 {width: 70%;
         margin-right: 40px;}
