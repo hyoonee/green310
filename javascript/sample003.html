@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동슬라이드예제3</title>
+
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+
+// btn li를 클릭했을때 슬라이드의 li가 같은 순번을 찾아 움직여라
+
+$('.btn li').click(function(){
+
+let i = $(this).index()
+console.log(i)
+$('.slide li').eq(i-1).css({'left':'0'}).stop().animate({'left':'-100%'},800)
+$('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':'0'},800)
+
+$('.btn li').removeClass('on')
+$(this).addClass('on')
+
+});
+
+
+// 3초에 한번씩 자동으로 컴퓨터가 btn의 li(0,1,2)를 클릭해라.
+let a=0;
+
+setInterval(function(){
+
+    a++;a
+    if(a==3)a=0;
+    console.log(a)
+
+    $('.btn li').eq(a).trigger('click')
+    // trigger 핸들러 를 통해 마우스를 제어하는 구조
+
+
+
+},3000)
+
+
+
+
+        })
+    </script>
+
+</head>
+<body>
+    
+    <div id="wrap">
+        <div class="slide">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="btn">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="auto">
+        <div class="listA">
+            <ul >
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="listB">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+<style>
+*{margin: 0;
+padding: 0;}
+ul{list-style: none;}
+
+/* #wrap{position: relative;}
+.slide{width: 100%;
+        height: 500px;
+        overflow: hidden;}
+.slide ul{width: auto;
+        height: 500px;}
+.slide li{position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        top: 0;
+        text-indent: -9999px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;}
+.slide li:nth-child(1){left: 0;
+                    background-image: url(slide/img/0.png);}
+.slide li:nth-child(2){background-image: url(slide/img/1.png);}
+.slide li:nth-child(3){background-image: url(slide/img/2.png);}
+
+.btn{position: absolute;
+    width: 54px;
+    left: 50%;
+    margin-left: -27px;
+    bottom: 70px;}
+.btn ul{display: flex;}
+
+.btn li{width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        background-color: #fff;
+        opacity: 0.6;
+        text-indent: -9999px;
+        margin: 0 2px;}
+.btn li.on{background-color: #000;
+    opacity: 1;} */
+
+/* //////////////////////////////////////////////////////////////// */
+
+#auto{position: relative;
+        }
+.listA {position: absolute;
+        top: 250px;
+        left: 100px;
+        z-index: 10;}
+.listA ul{}
+.listA li{
+        border-radius: 7px;
+        width: 14px;
+        height: 14px;
+        background-color: red;
+        opacity: 0.6;
+        margin-bottom: 50px;
+        }
+.listA li:nth-child(1){background-color: aqua;}
+
+.listB {
+        width: 100%;
+        height: 700px;
+        top: 0;
+        left: 0;
+    }
+.listB ul{display: flex;
+}
+.listB li{position: absolute;
+    z-index: 1;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: blue;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        }
+.listB li:nth-child(1){background-image: url(slide/img/ch_0.png);
+                    top: 0;}
+.listB li:nth-child(2){background-image: url(slide/img/ch_1.png);}
+.listB li:nth-child(3){background-image: url(slide/img/ch_2.png);}
+
+
+
+
+
+
+
+
+
+</style>
+
+</body>
+</html>

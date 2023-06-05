@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+
+    <script>
+
+        window.onload = function(){
+
+            const btn= document.getElementById('btn'),
+                ti1= document.getElementById('ti1'),
+                // ev=document.querySelector('ul'),
+                // evli = document.querySelectorAll('li')
+
+            // console.log(ev)
+            // const ev1=ev.children[0]
+                ev1= document.getElementById('ev1'),
+                ev2= document.getElementById('ev2'),
+                ev3= document.getElementById('ev3'),
+                ev4= document.getElementById('ev4'),
+                ev5= document.getElementById('ev5'),
+                ev6= document.getElementById('ev6'),
+                ev7= document.getElementById('ev7')
+            
+            btn.onclick=function(){
+
+                alert('클릭하셨습니다.')
+            };
+            ti1.onmouseenter = function(){
+                ti1.style.backgroundColor = 'red'
+            };
+
+            ti1.onmouseout = function(){
+                ti1.style.backgroundColor = 'transparent'
+            }
+
+            ev1.onmouseenter = function(){
+                ev1.style.backgroundColor = 'red'}
+            ev2.onmouseenter = function(){
+                ev1.style.backgroundColor = 'orange';
+                ev2.style.backgroundColor = 'orange';}
+            ev3.onmouseenter = function(){
+                ev1.style.backgroundColor = 'yellow';
+                ev2.style.backgroundColor = 'yellow';
+                ev3.style.backgroundColor = 'yellow';}
+            ev4.onmouseenter = function(){
+                ev1.style.backgroundColor = 'green';
+                ev2.style.backgroundColor = 'green';
+                ev3.style.backgroundColor = 'green';
+                ev4.style.backgroundColor = 'green';}
+            ev5.onmouseenter = function(){
+                ev1.style.backgroundColor = 'blue';
+                ev2.style.backgroundColor = 'blue';
+                ev3.style.backgroundColor = 'blue';
+                ev4.style.backgroundColor = 'blue';
+                ev5.style.backgroundColor = 'blue';}
+            ev6.onmouseenter = function(){
+                ev1.style.backgroundColor = 'navy';
+                ev2.style.backgroundColor = 'navy';
+                ev3.style.backgroundColor = 'navy';
+                ev4.style.backgroundColor = 'navy';
+                ev5.style.backgroundColor = 'navy';
+                ev6.style.backgroundColor = 'navy';}
+            ev7.onmouseenter = function(){
+                ev1.style.backgroundColor = 'purple';
+                ev2.style.backgroundColor = 'purple';
+                ev3.style.backgroundColor = 'purple';
+                ev4.style.backgroundColor = 'purple';
+                ev5.style.backgroundColor = 'purple';
+                ev6.style.backgroundColor = 'purple';
+                ev7.style.backgroundColor = 'purple';}
+
+
+
+                // ev.onmouseout = function(){
+                // list.children.style.backgroundColor = 'transparent'}
+            
+
+            ev1.onmouseout = function(){
+                ev1.style.backgroundColor = 'transparent'}
+            ev2.onmouseout = function(){
+                ev2.style.backgroundColor = 'transparent'}
+            ev3.onmouseout = function(){
+                ev3.style.backgroundColor = 'transparent'}
+            ev4.onmouseout = function(){
+                ev4.style.backgroundColor = 'transparent'}
+            ev5.onmouseout = function(){
+                ev5.style.backgroundColor = 'transparent'}
+            ev6.onmouseout = function(){
+                ev6.style.backgroundColor = 'transparent'}
+            ev7.onmouseout = function(){
+                ev7.style.backgroundColor = 'transparent'}
+            
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="ti1">자바스크립트_이벤트</h1>
+    <p>이벤트는 키보드를 누르거나 마우스를 클릭하는 것처럼 어떤 현상이
+        프로그램에 영향을 미치는 것을 말합니다.
+    </p>
+    <ul>
+        <li id="ev1">마우스이벤트</li>
+        <li id="ev2">키보드이벤트</li>
+        <li id="ev3">HTML 프레임이벤트</li>
+        <li id="ev4">HTML 입력양식이벤트</li>
+        <li id="ev5">사용자인터페이스이벤트</li>
+        <li id="ev6">구조변화이벤트</li>
+        <li id="ev7">터치이벤트</li>
+    </ul>
+
+    <P>작성법<br>
+    
+        일반적인방식 : window.onload = function(){실행문}
+    </P>
+    <p>설명 - window는 선택자의 자리, onload는 이벤트 속성이라는 이름으로
+        on을 제외한 load가 이벤트 이름 또는 이벤트타임이라 불리고, 이벤트
+        속성에 넣는 함수를 이벤트 리스너 또는 이벤트핸들러 라고 한다.
+    </p>
+    <button id="btn">클릭</button>
+
+
+
+
+
+
+    <h2>추가선택자</h2>
+
+    <p>id값을 매번 HTML 요소에 추가하는데 불편함이 있는
+        getElementById 값 대신에
+        querySelector 또는 querySelectorAll 이라는 객체로 불러낼수있다.<br>
+        이때, querySelector 는 HTML 태그중 중복요소가 있을시 
+        맨 처음에 있는 요소만 부르고, 
+        querySelectorAll 은 모든 요소를 부른다.
+    </p>
+
+    <div id="toggle">
+        <span></span>
+        <ul id="gnb">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="toggle2">
+        <span></span>
+        <ul id="gnb2">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+    <style>
+
+        #toggle span{width: 40px;
+                    height: 40px;
+                    background-color: black;
+                    display: block;
+                    cursor: pointer;}
+
+        #toggle span:hover{background-color: red;}
+        #gnb{width: 100px;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;}
+        #gnb li{color: #fff;
+                padding: 10px;
+                margin-bottom: 2px;
+                background-color: blue;}
+        
+
+    </style>
+
+
+
+<style>
+
+    #toggle2 span{width: 40px;
+                height: 40px;
+                margin-top: 50px;
+                background-color: yellow;
+                display: block;
+                cursor: pointer;}
+
+    #toggle2 span:hover{background-color: red;}
+    #gnb2{width: 100px;
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;}
+    #gnb2 li{color: #fff;
+            padding: 10px;
+            margin-bottom: 2px;
+            background-color: blue;}
+    
+
+</style>
+
+    <script>
+        // 토글의 span에 클릭을 하면 gnb가 나타나라
+
+    let btn = document.querySelector('span'),
+    gnb = document.getElementById('gnb'),
+    ii = 0
+
+    btn.onclick = function(){
+
+        ii++;
+        if(ii==2)
+        ii=0
+        console.log(ii)
+
+        if(ii==1){
+            gnb.style.display = 'block'
+        }else{
+            gnb.style.display = 'none'
+        }
+
+
+
+        // if(gnb.style.display = 'block'){
+
+        //     gnb.style.display = 'none'
+        // }else{
+        //     gnb.style.display = 'block'
+        // }
+        
+
+
+
+
+
+    }
+
+
+
+
+
+
+    </script>
+
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <script>
+        // toggle2의 span을 클릭했을때, gnb2가 나타나라
+
+        $('#toggle2>span').click(function(){
+
+            $('#gnb2').show(){
+                $('gnb2').fadeToggle()
+            }
+
+
+
+
+
+
+
+
+        })
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
